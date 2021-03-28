@@ -1,0 +1,22 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Calculator web app using node.js and express",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cameron327/calculator.git"
+  },
+  "author": "Cameron Yee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cameron327/calculator/issues"
+  },
+  "homepage": "https://github.com/Cameron327/calculator#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
