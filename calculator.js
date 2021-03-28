@@ -16,8 +16,14 @@ app.get("/", function(req, res) {
 
 // this is how you deal with post requests
 app.post("/", function(req, res) {
-    res.send("Thanks for posting that");
     console.log(req.body);
+
+    var num1 = Number(req.body.num1);
+    var num2 = Number(req.body.num2);
+
+    var sum = num1 + num2;
+    res.send("The sum of those numbers is " + sum);
+
 });
 
 // set up the port with port 3000 using app.listen()
