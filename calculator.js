@@ -26,6 +26,14 @@ app.post("/", function(req, res) {
 
 });
 
+// Add some new routes (What happens when the user goes to the get route? That is what the app.get is for)
+// We will send the html page
+app.get("/bmiCalculator.html", function(req, res) {
+    app.sendFile(__dirname + "/bmiCalculator.html");
+});
+
+
+
 // set up the port with port 3000 using app.listen()
 app.listen(3000, function() {
     console.log("Successfully opened port 3000");
