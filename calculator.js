@@ -29,9 +29,19 @@ app.post("/", function(req, res) {
 // Add some new routes (What happens when the user goes to the get route? That is what the app.get is for)
 // We will send the html page
 app.get("/bmiCalculator.html", function(req, res) {
-    app.sendFile(__dirname + "/bmiCalculator.html");
+    res.sendFile(__dirname + "/bmiCalculator.html");
 });
 
+// now we will do something with the data
+app.post("/bmiCalculator.html", function(req, res) {
+    // use parseFloat to cast a string as a decimal number
+    var weight = parseFloat(req.body.weight);
+    var height = parseFloat(req.body.height);
+    var bmi = weight/(height * height);
+
+    // now send it back
+    res.send("Your bmi is " + bmi);
+});
 
 
 // set up the port with port 3000 using app.listen()
